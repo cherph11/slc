@@ -35,8 +35,8 @@
 		</div>
 	</div>
 
-	<div class="grid sm:grid-cols-2 gap-4 place-items-center w-screen p-7">
-		<div class="card pt-5 bg-red-500 glass w-85 shadow-sm">
+	<div class="grid sm:grid-cols-2 gap-4 place-items-center w-screen p-7 px-0">
+		<div class="card pt-5 bg-red-500 glass w-80 sm:w-85 shadow-sm">
 			<figure><Flame class="text-amber-400" size="44" /></figure>
 			<div class="card-body grid place-items-center">
 				<h2 class="card-title">Problems it causes</h2>
@@ -47,7 +47,7 @@
 				</ul>
 			</div>
 		</div>
-		<div class="card pt-5 bg-blue-500 glass w-85 shadow-sm">
+		<div class="card pt-5 bg-blue-500 glass w-80 sm:w-85 shadow-sm">
 			<figure><Earth class="text-green-900" size="44" /></figure>
 			<div class="card-body grid place-items-center">
 				<h2 class="card-title">How to recycle it</h2>

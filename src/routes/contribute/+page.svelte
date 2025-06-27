@@ -23,11 +23,14 @@
 <div class="flex flex-col items-center">
 	<input type="text" placeholder="Search" bind:value={input} class="input input-lg" />
 
-	<div use:autoAnimate class="grid sm:grid-cols-3 w-screen place-items-center mt-4 gap-7 px-2">
+	<div
+		use:autoAnimate
+		class="grid sm:grid-cols-2 md:grid-cols-3 w-screen place-items-center mt-4 gap-7 px-2"
+	>
 		{#each searchResults as plastic}
 			<a
 				href={`/info/${plastic.id}`}
-				class="card motion-opacity-in-0 motion-translate-y-in-100 motion-blur-in-md btn bg-secondary h-fit w-96 bg-base-100 card-sm shadow-sm"
+				class="card motion-opacity-in-0 motion-translate-y-in-100 motion-blur-in-md btn bg-secondary h-fit w-88 bg-base-100 card-sm shadow-sm"
 			>
 				<figure>
 					<img
