@@ -1,0 +1,62 @@
+@import 'tailwindcss';
+@plugin 'tailwindcss-motion';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+@plugin "daisyui";
+@plugin "tailwindcss-view-transitions";
+
+@plugin "daisyui/theme" {
+  name: "cringechad";
+  default: false;
+  prefersdark: false;
+  color-scheme: "dark";
+  --color-base-100: #FFC107;
+  --color-base-200: #347433;
+  --color-base-300: oklch(55% 0.046 257.417);
+  --color-base-content: oklch(12% 0.042 264.695);
+  --color-primary: oklch(59% 0.145 163.225);
+  --color-primary-content: oklch(97% 0.021 166.113);
+  --color-secondary: oklch(64% 0.2 131.684);
+  --color-secondary-content: oklch(98% 0.031 120.757);
+  --color-accent: oklch(68% 0.162 75.834);
+  --color-accent-content: oklch(98% 0.026 102.212);
+  --color-neutral: oklch(44% 0.03 256.802);
+  --color-neutral-content: oklch(98% 0.002 247.839);
+  --color-info: oklch(70% 0.165 254.624);
+  --color-info-content: oklch(28% 0.091 267.935);
+  --color-success: oklch(79% 0.209 151.711);
+  --color-success-content: oklch(26% 0.065 152.934);
+  --color-warning: oklch(82% 0.189 84.429);
+  --color-warning-content: oklch(27% 0.077 45.635);
+  --color-error: oklch(71% 0.194 13.428);
+  --color-error-content: oklch(27% 0.105 12.094);
+  --radius-selector: 1rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.5rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1.5px;
+  --depth: 0;
+  --noise: 0;
+}
+
+
+.animated-background {
+    background-size: 400%;
+
+    -webkit-animation: animation 3s ease infinite;
+    -moz-animation: animation 3s ease infinite;
+    animation: animation 3s ease infinite;
+}
+
+@keyframes animation {
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+    
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
