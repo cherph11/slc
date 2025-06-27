@@ -46,7 +46,7 @@
 
 	<h2>💡 How to Use This Site</h2>
 	<ol>
-		<li>Browse through each plastic type on the homepage.</li>
+		<li>Browse through each plastic type on the contribute page.</li>
 		<li>Click on any item to view full information.</li>
 		<li>Follow the tips to recycle and make better choices.</li>
 	</ol>
