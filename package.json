@@ -34,6 +34,8 @@
 	"dependencies": {
 		"@formkit/auto-animate": "^0.8.2",
 		"@lucide/svelte": "^0.522.0",
+		"@supabase/ssr": "^0.6.1",
+		"@supabase/supabase-js": "^2.50.2",
 		"@threlte/core": "^8.0.5",
 		"@threlte/extras": "^9.4.0",
 		"daisyui": "^5.0.43",

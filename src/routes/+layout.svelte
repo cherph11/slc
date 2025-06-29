@@ -1,9 +1,19 @@
 <script lang="ts">
-	import { Leaf } from '@lucide/svelte';
+	import { Leaf, User } from '@lucide/svelte';
 	import '../app.css';
-	import { onNavigate } from '$app/navigation';
+	import { onNavigate, invalidate } from '$app/navigation';
 
-	let { children } = $props();
+	import { onMount } from 'svelte';
+	let { data, children } = $props();
+	let { session, supabase } = $derived(data);
+	onMount(() => {
+		const { data } = supabase.auth.onAuthStateChange((_, newSession) => {
+			if (newSession?.expires_at !== session?.expires_at) {
+				invalidate('supabase:auth');
+			}
+		});
+		return () => data.subscription.unsubscribe();
+	});
 
 	onNavigate((navigation) => {
 		if (!document.startViewTransition) return;
@@ -25,9 +35,25 @@
 			</a>
 		</div>
 		<div class="flex-none">
-			<ul class="menu menu-horizontal px-1">
-				<li><a href="/contribute">Contribute</a></li>
+			<ul class="menu menu-horizontal px-1 flex items-center gap-2">
+				<li>
+					<details class="z-[999]">
+						<summary>Contribute </summary>
+						<ul class="bg-base-100 rounded-t-none p-2">
+							<li><a href="/contribute">Contribute</a></li>
+							<li><a href="/rewards">Rewards</a></li>
+						</ul>
+					</details>
+				</li>
 				<li><a href="/about">About</a></li>
+				<li>
+					<a
+						href="/account"
+						class="rounded-[100%] aspect-square glass grid place-items-center p-2 hover:bg-gray-400 hover:bg-opacity-10 transition-all"
+					>
+						<User />
+					</a>
+				</li>
 			</ul>
 		</div>
 	</div>

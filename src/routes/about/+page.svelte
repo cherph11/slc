@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Content from './content.md';
 </script>
 
 <main class="text-left px-5 grid prose">
